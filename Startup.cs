@@ -4,6 +4,7 @@ using EPiServer.Cms.UI.AspNetIdentity;
 using EPiServer.Scheduler;
 using EPiServer.ServiceLocation;
 using EPiServer.Web.Routing;
+using Gulla.Episerver.SqlStudio;
 
 namespace AlloyLocalizedSql;
 
@@ -30,7 +31,8 @@ public class Startup
             .AddCms()
             .AddAlloy()
             .AddAdminUserRegistration()
-            .AddEmbeddedLocalization<Startup>();
+            .AddEmbeddedLocalization<Startup>()
+            .AddSqlStudio();
 
         // Required by Wangkanai.Detection
         services.AddDetection();
