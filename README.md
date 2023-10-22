@@ -39,3 +39,8 @@ Create an empty database on the external database server and update the connecti
 ```bash
 $ dotnet run
 ````
+
+### Login
+
+u: admin
+p: Admin1337!
