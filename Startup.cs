@@ -1,4 +1,5 @@
 using AlloyLocalizedSql.Extensions;
+using DbLocalizationProvider.AspNetCore;
 using EPiServer.Cms.Shell;
 using EPiServer.Cms.UI.AspNetIdentity;
 using EPiServer.Scheduler;
@@ -43,6 +44,8 @@ public class Startup
             options.Cookie.HttpOnly = true;
             options.Cookie.IsEssential = true;
         });
+
+        services.AddDbLocalizationProvider(null);
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
